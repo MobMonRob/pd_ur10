@@ -1,0 +1,12 @@
+<launch>
+  <include file="$(find universal_robot)/ur_bringup/launch/ur10_bringup.launch">
+     <arg name="limited" value="true" />
+     <arg name="robot_ip" value="192.168.3.2" />
+  </include>
+  <include file="$(find universal_robot)/ur10_moveit_config/launch/ur10_moveit_planning_execution.launch">
+     <arg name="limited" value="true" />
+  </include>
+  <include file="$(find universal_robot)/ur10_moveit_config/launch/moveit_rviz.launch">
+     <arg name="config" value="true" />
+  </include>
+</launch>
